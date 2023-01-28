@@ -1,0 +1,43 @@
+{
+  "name": "@dplus/themed",
+  "version": "0.0.5",
+  "description": "React Native Themed UI Components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc --composite false",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react native",
+    "themed",
+    "react native ui",
+    "react native components",
+    "ui library",
+    "ios",
+    "android",
+    "bootstrap"
+  ],
+  "scripts": {
+    "build": "tsc --composite false",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "rimraf node_modules && yarn"
+  },
+  "author": "D",
+  "license": "MIT",
+  "peerDependencies": {
+    "@dplus/rn-ui": "0.0.2"
+  },
+  "devDependencies": {
+    "@dplus/rn-ui": "0.0.2"
+  }
+}
