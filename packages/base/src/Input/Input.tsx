@@ -106,7 +106,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
 
     this.keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
-      this.keyboardDidHide
+      this.keyboardDidHide.bind(this)
     );
   }
 
