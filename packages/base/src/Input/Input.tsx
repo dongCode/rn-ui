@@ -115,7 +115,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
   }
 
   keyboardDidHide(): void {
-    this.input.blur();
+    this.input?.blur();
   }
 
   focus(): void {
