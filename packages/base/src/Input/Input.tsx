@@ -98,7 +98,9 @@ export interface InputProps
 
 export class Input extends React.Component<InputProps & { theme?: Theme }> {
   static displayName = 'Input';
+  input: any;
   keyboardDidHideListener: EmitterSubscription;
+
   constructor(props: InputProps) {
     super(props);
 
@@ -112,10 +114,9 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
     this.keyboardDidHideListener.remove();
   }
 
-  keyboardDidHide = () => {
+  keyboardDidHide(): void {
     this.input.blur();
-  };
-  input: any;
+  }
 
   focus(): void {
     this.input.focus();
